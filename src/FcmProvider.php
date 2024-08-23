@@ -1,6 +1,6 @@
 <?php
 
-namespace Appy\FcmHttpV1;
+namespace gitspark\FcmHttpV1;
 
 use Illuminate\Support\ServiceProvider;
 

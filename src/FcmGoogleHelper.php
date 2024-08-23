@@ -1,6 +1,6 @@
 <?php
 
-namespace Appy\FcmHttpV1;
+namespace gitspark\FcmHttpV1;
 
 use Google\Client as GClient;
 use Google\Service\FirebaseCloudMessaging;
@@ -10,7 +10,7 @@ class FcmGoogleHelper
 {
     public static function configureClient()
     {
-        $path = config('fcm_config.fcm_json_path');
+        $path = base_path() . '/' . env('FCM_JSON');
 
         $client = new GClient();
         try {

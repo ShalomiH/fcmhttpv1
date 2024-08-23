@@ -1,16 +1,19 @@
 {
-    "name": "appy/fcmhttpv1",
+    "name": "gitspark/fcmhttpv1",
     "description": "FCM HTTP V1 packages",
     "license": "MIT",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Appy\\FcmHttpV1\\": "src/"
+            "gitspark\\FcmHttpV1\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Appy Agency"
+        },
+        {
+            "name": "gitspark"
         }
     ],
     "minimum-stability": "dev",

@@ -9,12 +9,12 @@ class ComposerStaticInit8dafda2d9d6c44848213bffa36f570fe
     public static $prefixLengthsPsr4 = array (
         'A' => 
         array (
-            'Appy\\Fcmhttpv1\\' => 15,
+            'gitspark\\Fcmhttpv1\\' => 15,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Appy\\Fcmhttpv1\\' => 
+        'gitspark\\Fcmhttpv1\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

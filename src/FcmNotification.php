@@ -1,11 +1,11 @@
 <?php
 
-namespace Appy\FcmHttpV1;
+namespace gitspark\FcmHttpV1;
 
 use Exception;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
-use Appy\FcmHttpV1\FcmGoogleHelper;
+use gitspark\FcmHttpV1\FcmGoogleHelper;
 
 
 class FcmNotification
@@ -117,17 +117,14 @@ class FcmNotification
     private function prepareSend()
     {
         if (isset($this->topic)) {
+            // Remove webpush, icon, and click_action
             $data = [
                 "message" => [
                     "topic" => $this->topic,
-                    "webpush" => [
                         "notification" => [
                             "title" => $this->title,
                             "body" => $this->body,
-                            "icon" => $this->icon !=null ? asset($this->icon) : '',
-                            "click_action" => $this->click_action ?? ''
                         ],
-                    ]
                 ]
             ];
         } elseif (isset($this->token)) {
@@ -153,7 +150,7 @@ class FcmNotification
 
     private function handleSend($encodedData)
     {
-        $url = config('fcm_config.fcm_api_url');
+        $url = "https://fcm.googleapis.com/v1/projects/". env('FCM_PROJECT_ID') . "/messages:send";
 
         $oauthToken = FcmGoogleHelper::configureClient();
 

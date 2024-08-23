@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Appy\\Fcmhttpv1\\' => array($baseDir . '/src'),
+    'gitspark\\Fcmhttpv1\\' => array($baseDir . '/src'),
 );
